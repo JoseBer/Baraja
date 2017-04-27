@@ -1,0 +1,50 @@
+<article>
+    <div class="msg-error" 
+    ng-show="viewPlayer.showMsg">RELLENA LOS CAMPOS!!!!</div>
+    <p>
+        <input 
+        type="text" 
+        id="playerName" 
+        ng-model="viewPlayer.playerName"
+        ng-class="{ 'has-error': !viewPlayer.playerName && viewPlayer.formIsSend }"
+        >
+        <label for="PlayerName">
+            Nombre
+        </label>
+    </p>
+    <p>
+        <input 
+        type="text" 
+        id="playerSurname" 
+        ng-model="viewPlayer.playerSurname"
+        ng-class="{ 'has-error': !viewPlayer.playerSurname && viewPlayer.formIsSend }"
+        >
+        <label for="playerSurname">
+            Apellido
+        </label>
+    </p>
+    <p>
+        <!--<select 
+        id="playerAvatar" 
+        ng-model="viewPlayer.playerAvatar"
+        ng-class="{ 'has-error': !viewPlayer.playerAvatar && viewPlayer.formIsSend }"
+        >
+            <option value="mamiferos">Mamíferos</option>
+            <option value="aves">Aves</option>
+        </select>-->
+        <div ng-model="avatar">
+            <input type="radio" name="avatar" value="<img 
+            ng-src="app/styles/imgs/Bueno.jpg"> Bueno<br>
+            <input type="radio" name="avatar" value=""> Feo<br>
+            <input type="radio" name="avatar" value=""> Malo
+        </div>    
+        <label for="playerAvatar">
+            Avatar
+        </label>
+    </p> 
+    <p>
+        <button ng-click="viewPlayer.addPlayer()">
+            Continuar Juego
+        </button>
+    </p>
+</article>
