@@ -32,15 +32,20 @@
             <option value="mamiferos">Mamíferos</option>
             <option value="aves">Aves</option>
         </select>-->
-        <div ng-model="avatar">
-            <input type="radio" name="avatar" value="<img 
-            ng-src="app/styles/imgs/Bueno.jpg"> Bueno<br>
-            <input type="radio" name="avatar" value=""> Feo<br>
-            <input type="radio" name="avatar" value=""> Malo
+        <!--ng-class="{ 'has-error': !viewPlayer.playerAvatar && viewPlayer.formIsSend }"-->
+        <div id="playerAvatar" 
+         
+         >
+            <img id ="avatares" ng-src="app/styles/imgs/bueno.jpg">
+            <input ng-model="viewPlayer.playerAvatar" type="radio" name="avatar" value="bueno"> Bueno            
+            <img id ="avatares" ng-src="app/styles/imgs/Feo.jpg">
+            <input ng-model="viewPlayer.playerAvatar" type="radio" name="avatar" value="Feo"> Feo
+            <img id ="avatares" ng-src="app/styles/imgs/Malo.jpg">
+            <input ng-model="viewPlayer.playerAvatar" type="radio" name="avatar" value="Malo"> Malo
         </div>    
-        <label for="playerAvatar">
+       <!-- <label for="playerAvatar">
             Avatar
-        </label>
+        </label>-->
     </p> 
     <p>
         <button ng-click="viewPlayer.addPlayer()">
